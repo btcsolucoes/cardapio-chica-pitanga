@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chica Pitanga — Digital Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;600;700;800&family=Alegreya+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-marks" aria-hidden="true">
+    <img src="assets/logo-clean.png" class="ambient-mark mark-1" alt="">
+    <img src="assets/logo-clean.png" class="ambient-mark mark-2" alt="">
+    <img src="assets/logo-clean.png" class="ambient-mark mark-3" alt="">
+    <img src="assets/logo-clean.png" class="ambient-mark mark-4" alt="">
+    <img src="assets/logo-clean.png" class="ambient-mark mark-5" alt="">
+  </div>
+
+  <main class="menu-shell">
+    <div class="language-switch" aria-label="Language">
+      <a class="language-pill" href="index.html" aria-label="Portuguese">
+        <span class="flag flag-br" aria-hidden="true"></span>
+        <span>PT</span>
+      </a>
+      <a class="language-pill is-active" href="en.html" aria-label="English">
+        <span class="flag flag-us" aria-hidden="true"></span>
+        <span>EN</span>
+      </a>
+    </div>
+
+    <header class="cover">
+      <div class="cover-brand">
+        <span class="menu-word">M E N U</span>
+        <span class="kicker">Digital Menu</span>
+        <img src="assets/logo-clean.png" alt="Chica Pitanga" class="logo">
+        <h1>Chica Pitanga</h1>
+        <p>Self-service, regional recipes and signature bar in Boa Viagem.</p>
+        <a class="cover-cta" href="#menu">View menu</a>
+      </div>
+
+      <div class="cover-balloons" aria-label="Opening hours">
+        <div class="balloon clay">
+          <span>Lunch</span>
+          <strong>Mon-Fri 11:40 AM-3:30 PM</strong>
+          <strong>Sat, Sun and holidays 11:30 AM-4 PM</strong>
+        </div>
+        <div class="balloon leaf">
+          <span>Dinner</span>
+          <strong>Mon-Thu 5 PM-10 PM</strong>
+          <strong>Fri and Sat 5 PM-11 PM</strong>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tab-dock" id="menu" role="tablist" aria-label="Menu categories">
+      <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-self" id="tab-self"><span>01</span>Self-service</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-degustacao" id="tab-degustacao"><span>02</span>Tasting</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-entradas" id="tab-entradas"><span>03</span>Starters</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-saladas" id="tab-saladas"><span>04</span>Salads & Kids</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-pratos" id="tab-pratos"><span>05</span>Main Dishes</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-sobremesas" id="tab-sobremesas"><span>06</span>Desserts</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-bebidas" id="tab-bebidas"><span>07</span>Soft Drinks</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-drinks" id="tab-drinks"><span>08</span>Cocktails</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-alcoolicas" id="tab-alcoolicas"><span>09</span>Alcoholic</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-vinhos" id="tab-vinhos"><span>10</span>Wine</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-info" id="tab-info"><span>11</span>Info</button>
+    </nav>
+
+    <section class="menu-status">
+      <span>Updated from the original menu</span>
+      <span>Prices in BRL</span>
+    </section>
+
+    <div class="tab-panels">
+      <section class="panel is-active" id="panel-self" role="tabpanel" aria-labelledby="tab-self">
+        <div class="section-hero self-hero">
+          <div>
+            <span>House lunch</span>
+            <h2>Self-service</h2>
+            <p>A dedicated section, almost a second menu: warm, varied and organized by buffet stations.</p>
+          </div>
+          <img src="assets/pescada.jpg" alt="Chica Pitanga dish">
+        </div>
+
+        <div class="buffet-board">
+          <article><span>Meats</span><p>Sun-dried beef with onions</p><p>Grilled chicken with herbs</p><p>House-style braised beef</p><p>Grilled fish with lime</p><p>Shrimp in regional sauce</p></article>
+          <article><span>Pasta</span><p>Penne with fresh tomato sauce</p><p>Tagliatelle with mushroom cream</p><p>Handmade gnocchi</p><p>Gratin lasagna</p><p>White, sugo and four-cheese sauces</p></article>
+          <article><span>Rice</span><p>White rice</p><p>Brown rice</p><p>Creamy baião de dois</p><p>Piemontese-style rice</p><p>Rice with vegetables</p></article>
+          <article><span>Sides</span><p>Cassava purée</p><p>House crunchy farofa</p><p>Artisanal pirão</p><p>Gratin vegetables</p><p>Fresh salads and light dressings</p></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-degustacao" role="tabpanel" aria-labelledby="tab-degustacao" hidden>
+        <div class="section-head"><span>Experience</span><h2>Tasting Menus</h2></div>
+        <div class="menu-list">
+          <article class="menu-item large"><div><span>6 steps</span><h3>Menu Confiance</h3><p>A culinary journey selected by Chef Claudemir Barros. Includes one glass of sparkling, white or red wine.</p></div><strong>185</strong></article>
+          <article class="menu-item"><div><span>Tour Menu</span><h3>Turistando 1</h3><p>Pumpkin roulade with shrimp; grilled sun-dried beef, coalho cheese pirão and crispy cassava; roasted coalho cheese with dulce de leche.</p></div><strong>109,90</strong></article>
+          <article class="menu-item"><div><span>Tour Menu</span><h3>Turistando 2</h3><p>Sun-dried beef escondidinho; tilapia in coconut sauce, pumpkin purée and peanut farofa; brûléed banana with tapioca ice cream.</p></div><strong>109,90</strong></article>
+          <article class="menu-item"><div><span>Tour Menu</span><h3>Turistando 3</h3><p>Mini land carpaccio; creamy baião de dois with gratin chicken; mini rapadura brownie with tapioca ice cream.</p></div><strong>109,90</strong></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-entradas" role="tabpanel" aria-labelledby="tab-entradas" hidden>
+        <div class="section-head"><span>To begin</span><h2>Starters</h2></div>
+        <div class="menu-list photo-list">
+          <article class="menu-item with-photo"><img src="assets/carpaccio.jpg" alt="Brûléed coalho cheese carpaccio"><div><span>Starter</span><h3>Brûléed coalho cheese carpaccio</h3><p>Toasted coalho cheese slices, artisanal pitanga syrup, tomato confit, cashews and white pizza.</p></div><strong>36</strong></article>
+          <article class="menu-item with-photo"><img src="assets/pasteis.jpg" alt="Sun-dried beef pastries"><div><span>Starter</span><h3>Sun-dried beef and coalho cheese pastries</h3><p>Crispy pastries served with artisanal passion fruit jam.</p></div><strong>45</strong></article>
+          <article class="menu-item"><div><span>Starter</span><h3>Coconut-crusted crispy shrimp</h3><p>Shrimp breaded with coconut and served with lightly spicy passion fruit jam.</p></div><strong>65</strong></article>
+          <article class="menu-item"><div><span>Starter</span><h3>Roast beef carpaccio</h3><p>Seared beef slices, parmesan, capers, fresh arugula and house potato chips.</p></div><strong>44</strong></article>
+          <article class="menu-item"><div><span>Starter</span><h3>Shrimp bisque skillet</h3><p>Sautéed shrimp in an intense bisque, served with golden artisanal bread.</p></div><strong>66</strong></article>
+          <article class="menu-item"><div><span>Starter</span><h3>Cod brandade</h3><p>Cod and potato cream with leek, gratin parmesan and extra virgin olive oil.</p></div><strong>46</strong></article>
+          <article class="menu-item"><div><span>Starter</span><h3>Rib croquettes</h3><p>Slow-cooked pork rib filling, panko crust and a touch of bacon.</p></div><strong>39</strong></article>
+          <article class="menu-item"><div><span>Starter</span><h3>Oven tostex</h3><p>Meia cura cheese, artisanal bread and diet apricot-orange jam, browned in butter.</p></div><strong>21</strong></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-saladas" role="tabpanel" aria-labelledby="tab-saladas" hidden>
+        <div class="section-head"><span>Fresh & family</span><h2>Salads & Kids</h2></div>
+        <div class="menu-list">
+          <article class="menu-item"><div><span>Salad</span><h3>Chica salad</h3><p>Grilled shrimp, curly lettuce, cherry tomatoes, banana, carrot, cashews and pitanga syrup.</p></div><strong>52</strong></article>
+          <article class="menu-item"><div><span>Salad</span><h3>Caesar salad</h3><p>Grilled chicken, lettuce, parmesan, croutons and the house creamy caesar dressing.</p></div><strong>42</strong></article>
+          <article class="menu-item"><div><span>Salad</span><h3>Celery salad</h3><p>Crisp celery, green apple, arugula, cashews and raisins with yogurt-lime dressing.</p></div><strong>45</strong></article>
+          <article class="menu-item large"><div><span>Kids</span><h3>Grilled protein with two sides</h3><p>Little fish, chicken or steak. Sides: rice, spaghetti, purée, fries or broccoli and tomato salad.</p></div><strong>50</strong></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-pratos" role="tabpanel" aria-labelledby="tab-pratos" hidden>
+        <div class="section-head"><span>Individual dishes</span><h2>Main Dishes</h2></div>
+        <div class="menu-list photo-list">
+          <article class="menu-item with-photo"><img src="assets/risoto-mar.jpg" alt="Seafood risotto"><div><span>Seafood</span><h3>Seafood risotto</h3><p>Creamy arboreal rice with artisanal bisque, shrimp, octopus, squid, fish and cherry tomatoes.</p></div><strong>80</strong></article>
+          <article class="menu-item with-photo"><img src="assets/pescada.jpg" alt="Fish stuffed with shrimp"><div><span>Seafood</span><h3>Fish stuffed with shrimp</h3><p>Grilled fish stuffed with shrimp, cream cheese and herbs over creamy risotto and bisque sauce.</p></div><strong>85</strong></article>
+          <article class="menu-item with-photo"><img src="assets/camarao.jpg" alt="Four-cheese shrimp"><div><span>Seafood</span><h3>Four-cheese shrimp</h3><p>Grilled shrimp in parmesan, gorgonzola, mozzarella and fresh cream sauce with piemontese-style rice.</p></div><strong>89</strong></article>
+          <article class="menu-item with-photo"><img src="assets/tornedor.jpg" alt="Gorgonzola gratin tournedos"><div><span>Meat</span><h3>Gorgonzola gratin tournedos</h3><p>Grilled filet mignon, tagliatelle with mushroom cream and gratin gorgonzola.</p></div><strong>90</strong></article>
+          <article class="menu-item"><div><span>Vegan</span><h3>Vegetable jambalaya</h3><p>Colorful rice with sautéed vegetables, aromatic seasonings and spices.</p></div><strong>65</strong></article>
+          <article class="menu-item"><div><span>Vegetarian</span><h3>Mushroom cream gratin penne</h3><p>Al dente pasta gratinated in shiitake, coconut milk and parmesan cream.</p></div><strong>68</strong></article>
+          <article class="menu-item"><div><span>Vegan</span><h3>Caponata gnocchi with tomato sauce</h3><p>Handmade gnocchi with eggplant caponata, peppers, fresh herbs and tomato sauce.</p></div><strong>65</strong></article>
+          <article class="menu-item"><div><span>Vegetarian</span><h3>Vegetable and herb gratin</h3><p>Seasonal vegetables gratinated in a light fresh herb cream and olive oil.</p></div><strong>65</strong></article>
+          <article class="menu-item"><div><span>Fish</span><h3>Fish with peanut crust</h3><p>Crunchy peanut-crusted fish, pumpkin risotto and citrus pitanga reduction.</p></div><strong>85</strong></article>
+          <article class="menu-item"><div><span>Pasta</span><h3>Penne with two sauces and shrimp</h3><p>Penne with shrimp, creamy white sauce, fresh tomato sauce and gratin parmesan.</p></div><strong>78</strong></article>
+          <article class="menu-item"><div><span>Cod</span><h3>Creamy cod with potato purée</h3><p>Oven-baked shredded cod with creamy nata, potato purée and leek.</p></div><strong>92</strong></article>
+          <article class="menu-item"><div><span>Fish</span><h3>Butter-grilled tilapia</h3><p>Finished with capers and lime, served with rice and broccoli.</p></div><strong>52</strong></article>
+          <article class="menu-item"><div><span>Regional</span><h3>Fish moqueca</h3><p>Fresh fish cooked with coconut milk and dendê oil, served with rice and artisanal pirão.</p></div><strong>78</strong></article>
+          <article class="menu-item"><div><span>Meat</span><h3>Filet risotto with roti sauce</h3><p>Arboreal rice with filet mignon cubes, red wine reduction and parmesan.</p></div><strong>79</strong></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-sobremesas" role="tabpanel" aria-labelledby="tab-sobremesas" hidden>
+        <div class="section-head"><span>Sweet finish</span><h2>Desserts</h2></div>
+        <div class="menu-list photo-list">
+          <article class="menu-item with-photo"><img src="assets/sobremesa.jpg" alt="French toast with dulce de leche cream"><div><span>Dessert</span><h3>French toast with dulce de leche cream</h3><p>Cassava bread, fresh cream, dulce de leche and tapioca ice cream.</p></div><strong>35</strong></article>
+          <article class="menu-item"><div><span>Dessert</span><h3>Cheesecake with pitanga jam</h3><p>Creamy cheesecake, artisanal pitanga jam and cashew praline.</p></div><strong>29</strong></article>
+          <article class="menu-item"><div><span>Dessert</span><h3>Cartola crumble</h3><p>Caramelized bananas, buttery crust, butter cheese and cinnamon ice cream.</p></div><strong>36</strong></article>
+          <article class="menu-item"><div><span>Dessert</span><h3>Chocolate petit gâteau</h3><p>Warm chocolate cake with creamy center and vanilla ice cream.</p></div><strong>30</strong></article>
+          <article class="menu-item"><div><span>Dessert</span><h3>Chocolate and caramel marquise</h3><p>Velvety layers of dark chocolate and caramel.</p></div><strong>30</strong></article>
+          <article class="menu-item"><div><span>Dessert</span><h3>Caramelized banana crepe</h3><p>Handmade crepe with caramelized bananas, vanilla ice cream and orange sauce.</p></div><strong>35</strong></article>
+          <article class="menu-item"><div><span>Dessert</span><h3>Pistachio sweet with berries</h3><p>Soft pistachio sweet served with fresh strawberries and raspberries.</p></div><strong>32</strong></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-bebidas" role="tabpanel" aria-labelledby="tab-bebidas" hidden>
+        <div class="section-head"><span>Non-alcoholic</span><h2>Soft Drinks</h2></div>
+        <div class="price-grid">
+          <article><h3>Still / sparkling mineral water</h3><strong>9,90</strong><span>300 ml</span></article>
+          <article><h3>Mineral water with / without gas</h3><strong>9,90</strong><span>Pet 300 ml</span></article>
+          <article><h3>H2O lime water</h3><strong>10,90</strong><span>500 ml</span></article>
+          <article><h3>Sprite Fresh lime</h3><strong>10</strong><span>510 ml</span></article>
+          <article><h3>Coconut water</h3><strong>15 / 25</strong><span>300 ml / pitcher</span></article>
+          <article><h3>Tonic water</h3><strong>10</strong><span>350 ml</span></article>
+          <article><h3>Diet tonic water</h3><strong>10</strong><span>350 ml</span></article>
+          <article><h3>Whole grape juice</h3><strong>20</strong><span>300 ml</span></article>
+          <article><h3>Coca-Cola</h3><strong>13,40</strong><span>Regular / zero</span></article>
+          <article><h3>Fanta orange</h3><strong>13,40</strong><span>Regular / zero</span></article>
+          <article><h3>Guaraná Kuat</h3><strong>13,40</strong><span>Regular / zero</span></article>
+          <article><h3>Schweppes citrus</h3><strong>13,40</strong><span></span></article>
+          <article><h3>Sprite</h3><strong>11,90</strong><span>Regular / zero</span></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" hidden>
+        <div class="section-head"><span>Signature bar</span><h2>Cocktails</h2></div>
+        <div class="menu-list photo-list">
+          <article class="menu-item with-photo"><img src="assets/drink.jpg" alt="Chica sunset"><div><span>Signature</span><h3>Chica sunset</h3><p>Sparkling wine, peach purée, lime juice and spicy pitanga cloud.</p></div><strong>30 / 25</strong></article>
+          <article class="menu-item"><div><span>Signature</span><h3>Apple G.T</h3><p>Gin, green apple syrup, lime juice and tonic water.</p></div><strong>30 / 25</strong></article>
+          <article class="menu-item"><div><span>Signature</span><h3>Chica mule</h3><p>Vodka, hibiscus, lime, citrus foam and lime zest.</p></div><strong>25 / 22</strong></article>
+          <article class="menu-item"><div><span>Signature</span><h3>Piranga</h3><p>Gin, orange juice, spicy pitanga, blue curaçao and pitanga leaf.</p></div><strong>32 / 28</strong></article>
+          <article class="menu-item"><div><span>Signature</span><h3>7 copas</h3><p>Espresso, smoked whiskey, grenadine and lime juice.</p></div><strong>32 / 28</strong></article>
+          <article class="menu-item"><div><span>Signature</span><h3>Catamarã</h3><p>Jabuticaba, vodka, lime juice and torched meringue.</p></div><strong>33 / 29</strong></article>
+          <article class="menu-item"><div><span>Signature</span><h3>Princesas</h3><p>Guava paste, lime juice, vodka and pink glitter.</p></div><strong>33 / 29</strong></article>
+          <article class="menu-item"><div><span>Classic</span><h3>Negroni</h3><p>Gin, Campari and Vermouth Rosso.</p></div><strong>25</strong></article>
+          <article class="menu-item"><div><span>Classic</span><h3>Cosmopolitan</h3><p>Vodka, cranberry juice, orange liqueur and lime juice.</p></div><strong>30</strong></article>
+          <article class="menu-item"><div><span>Classic</span><h3>Mojito</h3><p>White rum, mint, lime juice and sparkling water.</p></div><strong>25</strong></article>
+          <article class="menu-item"><div><span>Classic</span><h3>Aperol spritz</h3><p>Sparkling wine, Aperol and sparkling water.</p></div><strong>25</strong></article>
+          <article class="menu-item"><div><span>Classic</span><h3>Margarita</h3><p>White tequila, orange liqueur and lime juice.</p></div><strong>30</strong></article>
+          <article class="menu-item"><div><span>Bar</span><h3>Italian soda</h3><p></p></div><strong>18,90</strong></article>
+          <article class="menu-item"><div><span>Bar</span><h3>Fruit cocktail with alcohol</h3><p></p></div><strong>16,55</strong></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-alcoolicas" role="tabpanel" aria-labelledby="tab-alcoolicas" hidden>
+        <div class="section-head"><span>Bar</span><h2>Alcoholic Drinks</h2></div>
+        <div class="price-grid dense">
+          <article><h3>Old Parr</h3><strong>290 / 28,90</strong><span>Bottle / shot</span></article>
+          <article><h3>Johnnie Walker Gold Label</h3><strong>320,90 / 32</strong><span>Bottle / shot</span></article>
+          <article><h3>Johnnie Walker Red Label</h3><strong>260,77 / 19,50</strong><span>Bottle / shot</span></article>
+          <article><h3>Johnnie Walker Black Label</h3><strong>31</strong><span>Shot</span></article>
+          <article><h3>Ballantines 12 YO</h3><strong>162,40 / 15,90</strong><span>Bottle / shot</span></article>
+          <article><h3>Michelob Ultra</h3><strong>15</strong><span>Gluten-free</span></article>
+          <article><h3>Ekaut draft beer</h3><strong>13</strong><span></span></article>
+          <article><h3>Stella Artois long neck</h3><strong>14</strong><span></span></article>
+          <article><h3>Heineken Premium</h3><strong>16</strong><span></span></article>
+          <article><h3>0.00% alcohol 355 ml</h3><strong>16,90</strong><span></span></article>
+          <article><h3>Sanhaçu Origem cachaça</h3><strong>13</strong><span>Shot</span></article>
+          <article><h3>Frejo cachaça</h3><strong>9,10</strong><span>Shot</span></article>
+          <article><h3>Seleta Reserva do Coronel</h3><strong>500 / 50</strong><span>Bottle / shot</span></article>
+          <article><h3>Umburana cachaça</h3><strong>12,52</strong><span>Shot</span></article>
+          <article><h3>Carvalheira Pura</h3><strong>10,20</strong><span>Shot</span></article>
+          <article><h3>Pitú cachaça</h3><strong>10</strong><span></span></article>
+          <article><h3>Absolut vodka</h3><strong>16,65</strong><span>Shot</span></article>
+          <article><h3>Smirnoff vodka</h3><strong>15</strong><span></span></article>
+          <article><h3>Cointreau</h3><strong>15,50</strong><span>Shot</span></article>
+          <article><h3>Licor 43</h3><strong>17,90</strong><span>Shot</span></article>
+          <article><h3>Jose Cuervo Silver tequila</h3><strong>15</strong><span>Shot</span></article>
+          <article><h3>Bacardi Carta Branca</h3><strong>14</strong><span></span></article>
+          <article><h3>Campari</h3><strong>11,50</strong><span></span></article>
+          <article><h3>Martini</h3><strong>11,50</strong><span></span></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-vinhos" role="tabpanel" aria-labelledby="tab-vinhos" hidden>
+        <div class="section-head"><span>Wine list</span><h2>Wine</h2></div>
+        <div class="wine-stack">
+          <article><h3>Sparkling</h3><p>Maravi Moscatel 85 · Chandon Brut Rosé 178 · Chandon Baby 187 ml 40 · Chandon Brut 160 · Terra Nova Brut 75</p></article>
+          <article><h3>Rosé & green wine</h3><p>Mar Salgado Rosé 85 · Cousino Macul Gris 99 · Obra Prima 85 · Casal Miranda Verde DOC 95</p></article>
+          <article><h3>White wines</h3><p>The Grill Master Chardonnay 79 · Vidal & Marcciard Sauvignon Blanc 110 · Don Mello de Uco Torrontés 120 · Coliman Chardonnay 97 · Urban Torrontés 83 · Osadia Sauvignon Blanc 92 · Montes Classic Reserva Chardonnay 155 · Taparaca Reserva Chardonnay 115 · Las Veletas Sauvignon Blanc 110 · Esporão Reserva Branco 295 · Aresti Estate Sauvignon Blanc 82,90</p></article>
+          <article><h3>Red wines</h3><p>Cordelier Cabernet Sauvignon 79 · Casa Perini Cabernet/Merlot 91 · Amitie Pinot Noir 107 · The Grill Master Malbec 79 · Vista Calma Malbec 99 · Crios Malbec 145 · Vidal & Marcciard Malbec 110 · Chilano Merlot 79 · Osadia Carménère 99 · J. Lebegue Bordeaux 160 · Chianti Cecchi DOCG 137 · Esporão Reserva Tinto 295 · Aresti Cabernet Sauvignon 82,90</p></article>
+          <article><h3>375 ml & glasses</h3><p>Camino de Chile Sauvignon Blanc 49 · Camino de Chile Cabernet Sauvignon 49 · Castelo de Pias glass 27 · Port wine 29 · Corkage service 30</p></article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-info" role="tabpanel" aria-labelledby="tab-info" hidden>
+        <div class="section-head"><span>Restaurant</span><h2>Information</h2></div>
+        <div class="info-cards">
+          <article><span>Address</span><p>Rua Petrolina, 19 · Boa Viagem · Recife - PE</p></article>
+          <article><span>Phone</span><p>+55 81 3334-8260 · WhatsApp +55 81 99125-7788</p></article>
+          <article><span>Social</span><p>@chicapitangarecife · chicapitanga@chicapitanga.com.br</p></article>
+          <article><span>Payment</span><p>Cash, Pix, Mastercard, Maestro, Elo, Visa, Visa Electron, Alelo and Ticket.</p></article>
+        </div>
+      </section>
+    </div>
+
+    <footer class="menu-footer">
+      <img src="assets/logo-clean.png" alt="Chica Pitanga">
+      <span>Chica Pitanga · Recife</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
