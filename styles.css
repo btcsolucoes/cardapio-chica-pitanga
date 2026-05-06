@@ -544,11 +544,13 @@ h1 {
 .price-grid strong {
   position: relative;
   isolation: isolate;
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .16em;
   border-radius: 0;
   color: var(--cream);
-  background: transparent;
+  background: url("assets/price-pitanga.png?v=clean") center / contain no-repeat;
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
@@ -556,19 +558,17 @@ h1 {
 
 .menu-item strong::before,
 .price-grid strong::before {
-  content: "";
-  position: absolute;
-  inset: -12px -14px -10px;
-  z-index: -1;
-  background: url("assets/price-pitanga.png?v=clean") center / contain no-repeat;
-  transform: rotate(-2deg);
+  content: "R$";
+  font-size: .68em;
+  font-weight: 800;
+  letter-spacing: .02em;
 }
 
 .menu-item strong {
-  min-width: 78px;
-  min-height: 70px;
-  padding: 8px;
-  font-size: .9rem;
+  width: 92px;
+  min-height: 82px;
+  padding: 12px 10px 6px;
+  font-size: .84rem;
 }
 
 .price-grid,
@@ -606,16 +606,17 @@ h1 {
 }
 
 .price-grid strong {
-  min-width: 74px;
-  min-height: 68px;
-  padding: 10px;
+  width: 90px;
+  min-height: 80px;
+  padding: 12px 9px 6px;
   margin-top: 10px;
   font-family: var(--text);
-  font-size: 1rem;
+  font-size: .84rem;
 }
 
 .price-grid.dense strong {
-  font-size: .82rem;
+  width: 98px;
+  font-size: .68rem;
 }
 
 .price-grid span,
