@@ -27,10 +27,12 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   color: var(--ink);
   background: linear-gradient(145deg, #8f2418, var(--urucum) 45%, #d75a2d 100%);
   font-family: var(--text);
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 body::before {
@@ -49,6 +51,11 @@ img {
 
 button {
   font: inherit;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ambient-marks {
@@ -347,6 +354,7 @@ h1 {
   padding: 12px 14px;
   background: rgba(111, 36, 24, .96);
   backdrop-filter: blur(14px);
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 
@@ -504,6 +512,10 @@ h1 {
   border-bottom: 1px solid rgba(111,36,24,.14);
 }
 
+.menu-item > div {
+  min-width: 0;
+}
+
 .menu-item:nth-child(3n + 2) {
   background: #ffe8c2;
 }
@@ -530,6 +542,7 @@ h1 {
   font-size: clamp(1rem, 2.25vw, 1.12rem);
   font-weight: 700;
   line-height: 1.28;
+  overflow-wrap: break-word;
 }
 
 .menu-item p {
@@ -538,6 +551,7 @@ h1 {
   font-size: .92rem;
   font-weight: 500;
   line-height: 1.45;
+  overflow-wrap: break-word;
 }
 
 .menu-item strong,
@@ -669,6 +683,10 @@ h1 {
 }
 
 @media (max-width: 820px) {
+  .menu-shell {
+    padding-inline: 12px;
+  }
+
   .cover-brand,
   .section-hero,
   .buffet-board,
@@ -676,6 +694,11 @@ h1 {
   .price-grid.dense,
   .info-cards {
     grid-template-columns: 1fr;
+  }
+
+  .cover {
+    min-height: auto;
+    padding: 78px max(18px, calc((100vw - 940px) / 2 + 24px)) 30px;
   }
 
   .logo {
@@ -689,6 +712,44 @@ h1 {
   .section-hero img {
     height: 190px;
   }
+
+  .section-head,
+  .section-hero,
+  .buffet-board,
+  .menu-list,
+  .price-grid,
+  .info-cards,
+  .wine-stack {
+    margin-inline: -12px;
+  }
+
+  .tab-dock {
+    grid-template-columns: repeat(11, minmax(104px, 1fr));
+    gap: 5px;
+    padding: 10px 12px;
+  }
+
+  .tab {
+    min-height: 56px;
+    padding: 8px 9px;
+    font-size: .78rem;
+  }
+
+  .price-grid article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 12px;
+    align-items: start;
+  }
+
+  .price-grid span {
+    grid-column: 1 / -1;
+  }
+
+  .price-grid strong {
+    justify-self: end;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 560px) {
@@ -696,46 +757,344 @@ h1 {
     padding-inline: 10px;
   }
 
+  .ambient-mark {
+    width: clamp(96px, 32vw, 145px);
+    opacity: .05;
+  }
+
   .cover {
-    padding: 76px 18px 26px;
+    min-height: 100svh;
+    align-content: center;
+    padding: 74px 16px 24px;
+  }
+
+  .cover::after {
+    right: -68px;
+    bottom: -58px;
+    width: 210px;
+    height: 210px;
+    opacity: .08;
+  }
+
+  .menu-word {
+    font-size: .68rem;
+    letter-spacing: .48em;
+  }
+
+  .kicker {
+    margin-top: 7px;
+    font-size: .68rem;
+    letter-spacing: .14em;
+  }
+
+  .logo {
+    width: 112px;
+    margin-top: 14px;
   }
 
   h1 {
-    font-size: clamp(4rem, 20vw, 6rem);
+    max-width: 100%;
+    font-size: clamp(2.65rem, 11vw, 3.05rem);
+    line-height: .9;
+  }
+
+  .cover-brand p {
+    max-width: 280px;
+    margin-top: 10px;
+    font-size: .94rem;
+    line-height: 1.38;
+  }
+
+  .cover-cta {
+    min-height: 42px;
+    margin-top: 16px;
+    padding-inline: 18px;
+    font-size: .74rem;
   }
 
   .language-switch {
-    top: 22px;
-    right: 18px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    gap: 5px;
+    padding: 4px;
+  }
+
+  .language-pill {
+    min-height: 31px;
+    padding-inline: 7px;
+    font-size: .7rem;
+  }
+
+  .language-pill > span:not(.flag) {
+    display: none;
+  }
+
+  .flag {
+    width: 22px;
+    height: 15px;
+  }
+
+  .cover-balloons {
+    gap: 9px;
+    margin-top: 20px;
+  }
+
+  .balloon {
+    min-height: 0;
+    padding: 14px 15px;
+    border-radius: 34px 6px 34px 6px;
+  }
+
+  .balloon span {
+    margin-bottom: 6px;
+    font-size: .64rem;
+    letter-spacing: .12em;
+  }
+
+  .balloon strong {
+    font-size: .8rem;
   }
 
   .tab-dock {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(88px, 96px);
+    grid-template-columns: none;
+    gap: 5px;
     margin-inline: calc(50% - 50vw);
-    padding-inline: 10px;
-    grid-template-columns: repeat(11, minmax(104px, 1fr));
+    padding: 8px 10px;
+    scroll-padding-inline: 10px;
+    scroll-snap-type: x proximity;
+  }
+
+  .tab {
+    min-height: 50px;
+    padding: 7px 8px;
+    border-radius: 7px;
+    font-size: .71rem;
+    scroll-snap-align: start;
+  }
+
+  .tab span {
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .menu-status {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 10px 2px 12px;
+    font-size: .62rem;
+    letter-spacing: .05em;
+  }
+
+  .section-head {
+    padding: 22px 14px 18px;
+  }
+
+  .section-head::before {
+    width: 7px;
+  }
+
+  .section-head,
+  .section-hero,
+  .buffet-board,
+  .menu-list,
+  .price-grid,
+  .info-cards,
+  .wine-stack {
+    margin-inline: -10px;
+  }
+
+  .section-head h2,
+  .section-hero h2 {
+    font-size: clamp(2.45rem, 12vw, 3.45rem);
+    line-height: .92;
+    overflow-wrap: break-word;
+  }
+
+  .section-hero {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .section-hero p {
+    font-size: .88rem;
+    line-height: 1.42;
+  }
+
+  .section-hero img {
+    height: 166px;
+    border-radius: 7px 34px 7px 34px;
+  }
+
+  .buffet-board article,
+  .price-grid article,
+  .info-cards article,
+  .wine-stack article {
+    min-height: 0;
+    padding: 14px 12px;
+  }
+
+  .buffet-board p {
+    padding: 8px 0;
+    font-size: .86rem;
+  }
+
+  .menu-list {
+    margin-top: 10px;
   }
 
   .menu-item.with-photo {
-    grid-template-columns: 86px minmax(0, 1fr);
+    grid-template-columns: 82px minmax(0, 1fr);
+    grid-template-areas:
+      "photo content"
+      "photo price";
+  }
+
+  .menu-item.with-photo > div {
+    grid-area: content;
   }
 
   .menu-item.with-photo strong {
-    grid-column: 2;
+    grid-area: price;
+    justify-self: end;
   }
 
   .menu-item img {
-    width: 86px;
+    grid-area: photo;
+    width: 82px;
     height: 100%;
-    min-height: 100px;
+    min-height: 112px;
+    border-radius: 7px 26px 7px 26px;
   }
 
   .menu-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    min-height: 0;
+    padding: 14px 12px;
+  }
+
+  .menu-item:not(.with-photo) strong {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
+  }
+
+  .menu-item h3 {
+    margin-top: 3px;
+    font-size: .95rem;
+    line-height: 1.28;
+  }
+
+  .menu-item p {
+    margin-top: 6px;
+    font-size: .84rem;
+    line-height: 1.42;
   }
 
   .menu-item strong {
-    min-width: 0;
-    width: 72px;
-    min-height: 62px;
+    width: 88px;
+    min-height: 76px;
+    padding: 10px 8px 5px;
+    font-size: .72rem;
+  }
+
+  .price-grid h3,
+  .info-cards p,
+  .wine-stack h3 {
+    font-size: .92rem;
+  }
+
+  .price-grid strong {
+    width: 88px;
+    min-height: 76px;
+    padding: 10px 8px 5px;
+    font-size: .72rem;
+  }
+
+  .price-grid.dense strong {
+    width: 98px;
+    font-size: .62rem;
+  }
+
+  .price-grid span,
+  .wine-stack p {
+    font-size: .8rem;
+  }
+
+  .wine-stack {
+    gap: 8px;
+  }
+
+  .wine-stack article {
+    border-left-width: 6px;
+  }
+
+  .menu-footer {
+    padding-top: 22px;
+    font-size: .78rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .cover {
+    padding-inline: 14px;
+  }
+
+  h1 {
+    font-size: clamp(2.45rem, 10.5vw, 2.8rem);
+  }
+
+  .cover-brand p {
+    max-width: 280px;
+    font-size: .86rem;
+  }
+
+  .tab-dock {
+    grid-auto-columns: minmax(82px, 90px);
+  }
+
+  .tab {
+    font-size: .66rem;
+  }
+
+  .menu-item.with-photo {
+    grid-template-columns: 74px minmax(0, 1fr);
+  }
+
+  .menu-item img {
+    width: 74px;
+    min-height: 104px;
+  }
+
+  .menu-item strong {
+    width: 82px;
+    min-height: 70px;
+    font-size: .66rem;
+  }
+
+  .price-grid strong {
+    width: 84px;
+    min-height: 72px;
+    font-size: .66rem;
+  }
+
+  .price-grid.dense strong {
+    width: 92px;
+    font-size: .58rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .panel {
+    animation: none;
   }
 }
