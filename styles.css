@@ -765,7 +765,7 @@ h1 {
   .cover {
     min-height: 100svh;
     align-content: center;
-    padding: 68px 16px 22px;
+    padding: 54px 16px 20px;
   }
 
   .cover::after {
@@ -788,21 +788,21 @@ h1 {
   }
 
   .logo {
-    width: 136px;
-    margin-top: 16px;
+    width: 154px;
+    margin-top: 14px;
   }
 
   h1 {
     max-width: 100%;
-    font-size: clamp(3.05rem, 13vw, 3.45rem);
+    font-size: clamp(3.18rem, 13.8vw, 3.68rem);
     line-height: .9;
   }
 
   .cover-brand p {
-    max-width: 330px;
+    max-width: 345px;
     margin-top: 10px;
-    font-size: 1.04rem;
-    line-height: 1.36;
+    font-size: 1.1rem;
+    line-height: 1.34;
   }
 
   .cover-cta {
@@ -836,24 +836,24 @@ h1 {
   }
 
   .cover-balloons {
-    gap: 6px;
-    max-width: 315px;
-    margin-top: 14px;
+    gap: 5px;
+    max-width: 330px;
+    margin-top: 12px;
   }
 
   .balloon {
     min-height: 0;
-    padding: 8px 11px;
+    padding: 6px 9px;
     border: 1px solid rgba(111, 36, 24, .18);
-    border-radius: 9px;
+    border-radius: 7px;
     color: #5b2d1f;
-    background: rgba(255, 244, 222, .34);
+    background: rgba(255, 244, 222, .24);
     box-shadow: none;
   }
 
   .balloon.clay,
   .balloon.leaf {
-    background: rgba(255, 244, 222, .34);
+    background: rgba(255, 244, 222, .24);
   }
 
   .balloon span {
@@ -865,9 +865,9 @@ h1 {
 
   .balloon strong {
     color: #5b2d1f;
-    font-size: .68rem;
-    font-weight: 700;
-    line-height: 1.28;
+    font-size: .62rem;
+    font-weight: 600;
+    line-height: 1.24;
   }
 
   .tab-dock {
@@ -961,10 +961,10 @@ h1 {
   }
 
   .menu-item.with-photo {
-    grid-template-columns: 82px minmax(0, 1fr);
+    grid-template-columns: 84px minmax(0, 1fr);
     grid-template-areas:
       "photo content"
-      "photo price";
+      "price price";
     align-items: start;
   }
 
@@ -975,22 +975,22 @@ h1 {
   .menu-item.with-photo strong {
     grid-area: price;
     justify-self: start;
-    margin-top: 4px;
+    margin-top: 6px;
   }
 
   .menu-item img {
     grid-area: photo;
-    width: 82px;
+    width: 84px;
     height: 100%;
-    min-height: 112px;
+    min-height: 104px;
     border-radius: 7px 26px 7px 26px;
   }
 
   .menu-item {
     grid-template-columns: minmax(0, 1fr);
-    gap: 10px;
+    gap: 8px;
     min-height: 0;
-    padding: 14px 12px;
+    padding: 15px 12px 13px;
   }
 
   .menu-item:not(.with-photo) strong {
@@ -1008,17 +1008,19 @@ h1 {
   }
 
   .menu-item p {
-    margin-top: 6px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(111, 36, 24, .12);
     font-size: .84rem;
     line-height: 1.42;
     padding-right: 0;
   }
 
   .menu-item strong {
-    width: 96px;
-    min-height: 82px;
-    padding: 9px 9px 5px;
-    font-size: .72rem;
+    width: 106px;
+    min-height: 88px;
+    padding: 9px 11px 5px;
+    font-size: .74rem;
   }
 
   .price-grid h3,
@@ -1028,10 +1030,10 @@ h1 {
   }
 
   .price-grid strong {
-    width: 96px;
-    min-height: 82px;
-    padding: 9px 9px 5px;
-    font-size: .72rem;
+    width: 106px;
+    min-height: 88px;
+    padding: 9px 11px 5px;
+    font-size: .74rem;
   }
 
   .price-grid.dense strong {
@@ -1063,13 +1065,17 @@ h1 {
     padding-inline: 14px;
   }
 
+  .logo {
+    width: 140px;
+  }
+
   h1 {
-    font-size: clamp(2.72rem, 12vw, 3.05rem);
+    font-size: clamp(2.86rem, 12.4vw, 3.18rem);
   }
 
   .cover-brand p {
-    max-width: 300px;
-    font-size: .96rem;
+    max-width: 310px;
+    font-size: 1rem;
   }
 
   .tab-dock {
@@ -1081,24 +1087,24 @@ h1 {
   }
 
   .menu-item.with-photo {
-    grid-template-columns: 74px minmax(0, 1fr);
+    grid-template-columns: 76px minmax(0, 1fr);
   }
 
   .menu-item img {
-    width: 74px;
-    min-height: 104px;
+    width: 76px;
+    min-height: 100px;
   }
 
   .menu-item strong {
-    width: 90px;
-    min-height: 76px;
-    font-size: .66rem;
+    width: 98px;
+    min-height: 82px;
+    font-size: .68rem;
   }
 
   .price-grid strong {
-    width: 90px;
-    min-height: 76px;
-    font-size: .66rem;
+    width: 98px;
+    min-height: 82px;
+    font-size: .68rem;
   }
 
   .price-grid.dense strong {
