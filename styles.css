@@ -560,7 +560,7 @@ h1 {
   position: absolute;
   inset: -12px -14px -10px;
   z-index: -1;
-  background: url("assets/price-pitanga.png") center / contain no-repeat;
+  background: url("assets/price-pitanga.png?v=clean") center / contain no-repeat;
   transform: rotate(-2deg);
 }
 
