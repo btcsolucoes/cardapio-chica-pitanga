@@ -12,8 +12,8 @@
   --ink: #1f120b;
   --muted: #6b442e;
   --line: rgba(31, 18, 11, .17);
-  --display: "Alegreya", Georgia, serif;
-  --text: "Alegreya Sans", system-ui, sans-serif;
+  --display: "Cormorant Garamond", Georgia, serif;
+  --text: "Libre Franklin", system-ui, sans-serif;
 }
 
 * {
@@ -30,6 +30,7 @@ body {
   color: var(--ink);
   background: linear-gradient(145deg, #8f2418, var(--urucum) 45%, #d75a2d 100%);
   font-family: var(--text);
+  text-rendering: optimizeLegibility;
 }
 
 body::before {
@@ -102,7 +103,7 @@ button {
   border-radius: 999px;
   color: rgba(255, 247, 233, .82);
   font-size: .78rem;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -224,8 +225,8 @@ button {
   display: block;
   color: var(--clay-dark);
   font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .14em;
+  font-weight: 700;
+  letter-spacing: .12em;
   text-transform: uppercase;
 }
 
@@ -251,8 +252,8 @@ p {
 h1,
 h2 {
   font-family: var(--display);
-  font-weight: 700;
-  line-height: .86;
+  font-weight: 600;
+  line-height: .88;
   letter-spacing: 0;
 }
 
@@ -260,7 +261,8 @@ h1 {
   margin-top: 4px;
   color: var(--forest);
   font-size: clamp(4.55rem, 13vw, 8.8rem);
-  font-style: italic;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .cover-brand p {
@@ -268,7 +270,7 @@ h1 {
   margin: 12px auto 0;
   color: #5e3c29;
   font-size: clamp(.98rem, 2.4vw, 1.16rem);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .cover-cta {
@@ -282,7 +284,7 @@ h1 {
   color: var(--cream);
   background: var(--pitanga-deep);
   font-size: .85rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: .08em;
   text-decoration: none;
   text-transform: uppercase;
@@ -321,7 +323,7 @@ h1 {
   display: block;
   margin-bottom: 8px;
   font-size: .72rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
@@ -360,7 +362,7 @@ h1 {
   color: rgba(255, 247, 233, .82);
   background: rgba(255, 232, 191, .11);
   text-align: left;
-  font-weight: 800;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -370,7 +372,7 @@ h1 {
   color: rgba(244, 223, 189, .54);
   font-family: var(--display);
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: .8;
 }
 
@@ -391,7 +393,7 @@ h1 {
   padding: 12px 2px 18px;
   color: rgba(255, 244, 222, .86);
   font-size: .74rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
 }
@@ -432,6 +434,7 @@ h1 {
   margin-top: 4px;
   color: var(--forest);
   font-size: clamp(3.2rem, 9vw, 6rem);
+  font-weight: 600;
 }
 
 .section-hero {
@@ -447,7 +450,7 @@ h1 {
   max-width: 500px;
   margin-top: 10px;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -478,7 +481,7 @@ h1 {
   border-bottom: 1px solid var(--line);
   color: var(--ink);
   font-size: .92rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .menu-list {
@@ -523,7 +526,9 @@ h1 {
 .menu-item h3 {
   margin-top: 4px;
   color: var(--forest);
+  font-family: var(--display);
   font-size: clamp(1.05rem, 2.4vw, 1.22rem);
+  font-weight: 700;
   line-height: 1.15;
 }
 
@@ -531,7 +536,7 @@ h1 {
   margin-top: 7px;
   color: var(--muted);
   font-size: .92rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.45;
 }
 
@@ -547,7 +552,7 @@ h1 {
   color: var(--cream);
   background: transparent;
   font-size: .9rem;
-  font-weight: 800;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -605,7 +610,9 @@ h1 {
 .info-cards p,
 .wine-stack h3 {
   color: var(--forest);
+  font-family: var(--display);
   font-size: 1rem;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -621,7 +628,7 @@ h1 {
   color: var(--cream);
   font-family: var(--text);
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -657,7 +664,7 @@ h1 {
   margin-top: 7px;
   color: var(--muted);
   font-size: .86rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.45;
 }
 
@@ -679,7 +686,7 @@ h1 {
 .info-cards p {
   margin-top: 8px;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .menu-footer {
@@ -690,7 +697,7 @@ h1 {
   padding: 28px 0 4px;
   color: rgba(255, 247, 233, .74);
   font-size: .86rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .menu-footer img {
