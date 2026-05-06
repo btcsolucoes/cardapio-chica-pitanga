@@ -526,10 +526,10 @@ h1 {
 .menu-item h3 {
   margin-top: 4px;
   color: var(--forest);
-  font-family: var(--display);
-  font-size: clamp(1.05rem, 2.4vw, 1.22rem);
+  font-family: var(--text);
+  font-size: clamp(1rem, 2.25vw, 1.12rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.28;
 }
 
 .menu-item p {
@@ -599,10 +599,10 @@ h1 {
 .info-cards p,
 .wine-stack h3 {
   color: var(--forest);
-  font-family: var(--display);
+  font-family: var(--text);
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.32;
 }
 
 .price-grid strong {
