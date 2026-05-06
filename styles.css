@@ -765,7 +765,7 @@ h1 {
   .cover {
     min-height: 100svh;
     align-content: center;
-    padding: 74px 16px 24px;
+    padding: 68px 16px 22px;
   }
 
   .cover::after {
@@ -788,21 +788,21 @@ h1 {
   }
 
   .logo {
-    width: 112px;
-    margin-top: 14px;
+    width: 136px;
+    margin-top: 16px;
   }
 
   h1 {
     max-width: 100%;
-    font-size: clamp(2.65rem, 11vw, 3.05rem);
+    font-size: clamp(3.05rem, 13vw, 3.45rem);
     line-height: .9;
   }
 
   .cover-brand p {
-    max-width: 280px;
+    max-width: 330px;
     margin-top: 10px;
-    font-size: .94rem;
-    line-height: 1.38;
+    font-size: 1.04rem;
+    line-height: 1.36;
   }
 
   .cover-cta {
@@ -836,24 +836,38 @@ h1 {
   }
 
   .cover-balloons {
-    gap: 9px;
-    margin-top: 20px;
+    gap: 6px;
+    max-width: 315px;
+    margin-top: 14px;
   }
 
   .balloon {
     min-height: 0;
-    padding: 14px 15px;
-    border-radius: 34px 6px 34px 6px;
+    padding: 8px 11px;
+    border: 1px solid rgba(111, 36, 24, .18);
+    border-radius: 9px;
+    color: #5b2d1f;
+    background: rgba(255, 244, 222, .34);
+    box-shadow: none;
+  }
+
+  .balloon.clay,
+  .balloon.leaf {
+    background: rgba(255, 244, 222, .34);
   }
 
   .balloon span {
-    margin-bottom: 6px;
-    font-size: .64rem;
-    letter-spacing: .12em;
+    margin-bottom: 3px;
+    color: var(--clay-dark);
+    font-size: .56rem;
+    letter-spacing: .1em;
   }
 
   .balloon strong {
-    font-size: .8rem;
+    color: #5b2d1f;
+    font-size: .68rem;
+    font-weight: 700;
+    line-height: 1.28;
   }
 
   .tab-dock {
@@ -951,6 +965,7 @@ h1 {
     grid-template-areas:
       "photo content"
       "photo price";
+    align-items: start;
   }
 
   .menu-item.with-photo > div {
@@ -959,7 +974,8 @@ h1 {
 
   .menu-item.with-photo strong {
     grid-area: price;
-    justify-self: end;
+    justify-self: start;
+    margin-top: 4px;
   }
 
   .menu-item img {
@@ -971,17 +987,18 @@ h1 {
   }
 
   .menu-item {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
     gap: 10px;
     min-height: 0;
     padding: 14px 12px;
   }
 
   .menu-item:not(.with-photo) strong {
-    grid-column: 2;
-    grid-row: 1;
-    align-self: start;
-    justify-self: end;
+    grid-column: 1;
+    grid-row: auto;
+    align-self: auto;
+    justify-self: start;
+    margin-top: 2px;
   }
 
   .menu-item h3 {
@@ -994,12 +1011,13 @@ h1 {
     margin-top: 6px;
     font-size: .84rem;
     line-height: 1.42;
+    padding-right: 0;
   }
 
   .menu-item strong {
-    width: 88px;
-    min-height: 76px;
-    padding: 10px 8px 5px;
+    width: 96px;
+    min-height: 82px;
+    padding: 9px 9px 5px;
     font-size: .72rem;
   }
 
@@ -1010,9 +1028,9 @@ h1 {
   }
 
   .price-grid strong {
-    width: 88px;
-    min-height: 76px;
-    padding: 10px 8px 5px;
+    width: 96px;
+    min-height: 82px;
+    padding: 9px 9px 5px;
     font-size: .72rem;
   }
 
@@ -1046,12 +1064,12 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(2.45rem, 10.5vw, 2.8rem);
+    font-size: clamp(2.72rem, 12vw, 3.05rem);
   }
 
   .cover-brand p {
-    max-width: 280px;
-    font-size: .86rem;
+    max-width: 300px;
+    font-size: .96rem;
   }
 
   .tab-dock {
@@ -1072,14 +1090,14 @@ h1 {
   }
 
   .menu-item strong {
-    width: 82px;
-    min-height: 70px;
+    width: 90px;
+    min-height: 76px;
     font-size: .66rem;
   }
 
   .price-grid strong {
-    width: 84px;
-    min-height: 72px;
+    width: 90px;
+    min-height: 76px;
     font-size: .66rem;
   }
 
