@@ -1266,7 +1266,7 @@ body.nav-is-fixed .tab-panels {
 }
 
 .panel {
-  width: min(860px, calc(100% - 48px));
+  width: min(860px, calc(100vw - 48px));
   margin: 18px auto 0;
   scroll-margin-top: 94px;
 }
@@ -1299,6 +1299,41 @@ body.nav-is-fixed .tab-panels {
   }
 
   .panel {
-    width: calc(100% - 24px);
+    width: calc(100vw - 24px);
   }
+}
+
+/* QrStack production refinements */
+.ambient-marks {
+  overflow: hidden;
+}
+
+.tab-panels {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: clamp(40px, 6vw, 72px);
+  padding-top: clamp(28px, 4vw, 42px);
+}
+
+body.nav-is-fixed .tab-panels {
+  padding-top: calc(var(--dock-height, 76px) + clamp(28px, 4vw, 42px));
+}
+
+.panel { margin-top: 0; }
+
+.buffet-board,
+.price-grid,
+.wine-stack,
+.info-cards {
+  margin-top: 18px;
+}
+
+.menu-item span,
+.price-grid span,
+.buffet-board span,
+.wine-stack h3 {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
 }
