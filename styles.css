@@ -1229,3 +1229,76 @@ h1 {
     animation: none;
   }
 }
+
+/* QrStack navigation standard */
+body { margin: 0; }
+
+.menu-status { display: none; }
+
+.tab-dock {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding: 10px max(12px, calc((100vw - 940px) / 2));
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-padding-inline: max(12px, calc((100vw - 940px) / 2));
+}
+
+body.nav-is-fixed .tab-dock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+body.nav-is-fixed .tab-panels {
+  padding-top: calc(var(--dock-height, 76px) + 18px);
+}
+
+.tab {
+  flex: 0 0 clamp(142px, 16vw, 172px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.panel {
+  width: min(860px, calc(100% - 48px));
+  margin: 18px auto 0;
+  scroll-margin-top: 94px;
+}
+
+.menu-list {
+  width: min(760px, 100%);
+  margin-inline: 0;
+}
+
+@media (max-width: 640px) {
+  .menu-shell {
+    padding-inline: 0;
+    overflow-x: hidden;
+  }
+
+  .cover,
+  .tab-dock {
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .tab-dock {
+    padding-inline: 12px;
+  }
+
+  .tab {
+    flex-basis: 148px;
+    min-height: 58px;
+    font-size: .68rem;
+  }
+
+  .panel {
+    width: calc(100% - 24px);
+  }
+}
